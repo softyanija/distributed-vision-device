@@ -12,7 +12,7 @@ Repository for robot operation of distributed-vision-devices
 2. Download dependencies
 
   ```bash
-  rosdep install -ignore-src --from-paths distributed-vision-device
+  rosdep install --ignore-src --from-paths distributed-vision-device
   cd $ROS_WORKSPACE/src
   catkin build distributed-vision-device
   ```
