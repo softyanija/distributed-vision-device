@@ -1,0 +1,14 @@
+devel/
+logs/
+build/
+bin/
+lib/
+
+.*~
+*~
+\#*
+.\#*
+*.pyc
+
+# Catkin custom files
+CATKIN_IGNORE
