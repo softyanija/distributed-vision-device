@@ -20,8 +20,26 @@ Repository for robot operation of distributed-vision-devices
   cd $ROS_WORKSPACE
   catkin build distributed-vision-device
   ```
-### Tag (WIP)
-1. 
+### Setting for apriltag
+Configure settings.yaml and tags.yaml to use apriltag. When you use multiple cameras, prepare these yaml files for each camera.
 
+1. Set `tag_family` you want to use in `config/settings.yaml`.
+
+2. Wrote tags info to use in `config/tags.yaml`.
+   `name` become tf frame name.
+
+ex.)
+```
+standalone_tags:
+  [
+  {id:  6, size: 0.015000, name: "timer_cam1_l_gripper_front_apriltag"},
+  {id:  7, size: 0.015000, name: "timer_cam1_r_gripper_front_apriltag"}  
+  ]
+```
+
+3. If you want to set in detail, please see [documents](http://wiki.ros.org/apriltag_ros).
+   Note that `publish_tf` in `settings.yaml` must be `true`!
 
 ## Usage
+
+
