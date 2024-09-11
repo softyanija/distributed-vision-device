@@ -2,7 +2,7 @@
 Repository for robot operation of distributed-vision-devices
 
 ## Setup
-
+### Packages
 1. Add this package to your workspace
 
   ```bash
@@ -20,6 +20,8 @@ Repository for robot operation of distributed-vision-devices
   cd $ROS_WORKSPACE
   catkin build distributed-vision-device
   ```
+### Tag (WIP)
+1. 
 
 
 ## Usage
