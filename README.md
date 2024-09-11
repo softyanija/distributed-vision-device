@@ -12,8 +12,12 @@ Repository for robot operation of distributed-vision-devices
 2. Download dependencies
 
   ```bash
+  cd  $ROS_WORKSPACE/src
+  wstool init
+  wstool merge ./distributed-vision-device/distributed_vision_device.
+  wstool update
   rosdep install --ignore-src --from-paths distributed-vision-device
-  cd $ROS_WORKSPACE/src
+  cd $ROS_WORKSPACE
   catkin build distributed-vision-device
   ```
 
