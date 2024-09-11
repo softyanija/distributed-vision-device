@@ -16,5 +16,6 @@
 
   <exec_depend>rospy</exec_depend>
   <exec_depend>dynamic_tf_publisher</exec_depend>
+  <exec_depend>apriltag_ros</exec_depend>
 
 </package>
