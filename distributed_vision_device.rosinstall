@@ -1,0 +1,5 @@
+# This is for noetic
+- git:
+    local-name: jsk_common/jsk_coordination_system
+    uri: git@github.com:jsk-ros-pkg/jsk_common.git
+    version: master
