@@ -21,7 +21,7 @@ Repository for robot operation of distributed-vision-devices
   catkin build distributed-vision-device
   ```
 ### Apriltag
-Configure settings.yaml and tags.yaml to use apriltag. When you use multiple cameras, prepare these yaml files for each camera.
+Configure settings.yaml and tags.yaml to use [apriltag](https://april.eecs.umich.edu/software/apriltag). When you use multiple cameras, prepare these yaml files for each camera.
 
 1. Set `tag_family` you want to use in `config/settings.yaml`.
 
@@ -43,7 +43,7 @@ standalone_tags:
 ### Tf from gripper to apriltag
 Set tf from gripper to apriltag in `launch/manage_tf.launch`. The parameters to be written are as follows. In detail, please see [here](http://wiki.ros.org/tf#static_transform_publisher)
 ```
-arg="x y z qx qy qz qw frame_id child_frame_id period_in_ms"
+args="x y z qx qy qz qw frame_id child_frame_id period_in_ms"
 ```
 
 
