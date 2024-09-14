@@ -21,6 +21,15 @@ Repository for robot operation of distributed-vision-devices
   catkin build distributed-vision-device
   ```
 ### Apriltag
+#### Hardware
+Stick the tag flat where it can be captured by the camera. If there is no suitable position for pasting, I recommend making your own gripper. At this time, you should be able to calculate the tf from any tf frame of the robot hand to the attatched tag.
+
+ex.) Gripper and tag
+![tag_attatchment](https://github.com/user-attachments/assets/2b531045-81e6-4c55-9830-317de2127f66)
+
+
+
+#### Software
 Configure settings.yaml and tags.yaml to use [apriltag](https://april.eecs.umich.edu/software/apriltag). When you use multiple cameras, prepare these yaml files for each camera.
 
 1. Set `tag_family` you want to use in `config/settings.yaml`.
@@ -56,9 +65,12 @@ roslaunch $ROS_WORKSPACE manage_tf.launch
 Copy `script/set_tf_manage.py` into your repository. I recommend that you copy `script/set_tf_manage.py` to the same directory as the program that uses it.
 
 ```
+# Rewrite here to something suitable according to the directory structure.
 from set_camera_tf import SetCameraTf
 
 ...
+
+(Move the tag attached to the gripper into the camera's angle of view)
 
 # create instance
 set_camera_tf = SetCameraTf("your_camera_name")
