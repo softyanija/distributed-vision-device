@@ -1,0 +1,14 @@
+# This is for noetic
+- git:
+    local-name: jsk_common/jsk_coordination_system
+    uri: git@github.com:jsk-ros-pkg/jsk_common.git
+    version: master
+- git:
+    local-name: apriltag
+    uri: git@github.com:AprilRobotics/apriltag.git
+    version: master
+- git:
+    local-name: apriltag_ros
+    uri: git@github.com:AprilRobotics/apriltag_ros.git
+    version: master
+    

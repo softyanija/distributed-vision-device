@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- set tf to tag atteched robot gripper -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="gripper_to_tag_tf_broadcaster" args="x y z qx qy qz qw frame_id child_frame_id period_in_ms" /> -->
+  
+  <node name="tf_publisher" pkg="dynamic_tf_publisher"
+        type="tf_publish.py"  output="screen">
+    <rosparam>
+      use_cache: false
+    </rosparam>
+  </node>
+  
+  <include file="$(find distributed_vision_device)/launch/apriltag.launch"/>
+
+  </launch>
