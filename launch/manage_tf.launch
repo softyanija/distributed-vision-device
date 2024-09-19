@@ -1,10 +1,7 @@
 <launch>
 
-  <!-- <node pkg="tf" type="static_transform_publisher" name="l_hand_front_broadcaster" args="0.0195 0.0065 0.0136 1.57 0 0 l_gripper_r_finger_tip_link l_gripper_front 100" /> -->
-
-  <!-- <node pkg="tf" type="static_transform_publisher" name="r_hand_front_broadcaster" args="0.0195 0.0065 0.0136 1.57 0 0 r_gripper_r_finger_tip_link r_gripper_front 100" /> -->
-
-  <!-- <node pkg="tf" type="static_transform_publisher" name="timer_cam2_broadcaster" args="-0.0105 -0.0065 -0.0025 0 -1.57 0 timer_cam2_link timer_cam2_color_optical_frame 100" /> -->
+  <!-- set tf to tag atteched robot gripper -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="gripper_to_tag_tf_broadcaster" args="x y z qx qy qz qw frame_id child_frame_id period_in_ms" /> -->
   
   <node name="tf_publisher" pkg="dynamic_tf_publisher"
         type="tf_publish.py"  output="screen">
@@ -13,8 +10,6 @@
     </rosparam>
   </node>
   
-  <!-- <include file="$(find memory_insertion)/launch/recognition/apriltag_all.launch"/> -->
-
-  <!-- <include file="$(find virtual_force_publisher)/launch/dualarm_virtual_force_publisher.launch"/> -->
+  <include file="$(find distributed_vision_device)/launch/apriltag.launch"/>
 
   </launch>
